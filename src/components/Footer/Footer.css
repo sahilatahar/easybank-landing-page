@@ -1,0 +1,93 @@
+.Footer {
+    width: 100%;
+    background: var(--dark-blue);
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.Footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 2rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+
+.icon:hover {
+    color: var(--lime-green);
+}
+
+.footer__list {
+    height: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.footer__list__item {
+    display: flex;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer__list__item:hover {
+    color: var(--lime-green);
+}
+
+.footer__list__item .invitation__btn {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.copyright__para {
+    width: 100%;
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding-bottom: 0.5rem;
+}
+
+.attribution a {
+    color: var(--lime-green);
+}
+
+@media screen and (max-width: 768px) {
+
+    .Footer {
+        place-items: center;
+        gap: 0;
+        padding: 3rem 0 0 0;
+    }
+
+    .Footer>div:not(:nth-of-type(2)) {
+        margin-bottom: 3rem;
+    }
+
+    .Footer>div:nth-of-type(2) {
+        margin-bottom: 1rem;
+    }
+
+    .footer__list__item {
+        margin: auto;
+    }
+}

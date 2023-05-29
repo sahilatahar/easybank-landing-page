@@ -1,0 +1,131 @@
+/* Header CSS */
+.Header {
+    display: flex;
+    height: 720px;
+}
+
+/* Header Left Section which contains texts */
+.left__panel {
+    width: 40%;
+    height: 100%;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left__panel .title {
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.left__panel .description {
+    width: 100%;
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+}
+
+/* Header left section invitation button and some button property inherit from Navbar.css*/
+.left__panel .invitation__btn {
+    width: fit-content;
+}
+
+/* Header Right section for Images*/
+.right__panel {
+    width: 60%;
+    height: 100%;
+    background: url('../../images/bg-intro-desktop.svg');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -60% 100%;
+    position: relative;
+}
+
+/* Right section Before for Mobile Images over Right section bg Image*/
+.right__panel::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../../images/image-mockups.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 140% 60%;
+}
+
+/* Responsive Codes of Header*/
+@media screen and (max-width: 1000px) {
+    .Header {
+        height: 500px;
+    }
+
+    .left__panel {
+        padding: 2rem;
+        width: 50%;
+    }
+
+    .right__panel {
+        width: 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: -50% 50%;
+    }
+
+    .right__panel::before {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Header {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+
+    .left__panel {
+        width: 90%;
+        order: 2;
+        height: auto;
+        padding: 0;
+        text-align: center;
+        margin: auto;
+    }
+
+    .left__panel .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .Header .invitation__btn {
+        align-self: center;
+    }
+
+    .right__panel {
+        width: 100%;
+        height: 75vw;
+        min-width: 75vw;
+        background: url('../../images/bg-intro-mobile.svg');
+        background-size: 100%;
+    }
+
+    .right__panel {
+        background: url('../../images/bg-intro-desktop.svg');
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: 40% 110%;
+        position: relative;
+    }
+
+    .right__panel::before {
+        background-size: 80%;
+        background-position: 50% 120%;
+        z-index: 2;
+    }
+}

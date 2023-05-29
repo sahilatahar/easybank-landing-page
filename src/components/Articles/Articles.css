@@ -1,0 +1,29 @@
+.Articles {
+    padding: 5rem 5rem 0 5rem;
+    background-color: var(--very-light-gray);
+}
+
+.Articles .title {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    font-weight: 300;
+}
+
+.article__cards {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Articles {
+        width: 100%;
+        padding: 10vw;
+        margin: auto;
+    }
+
+    .Articles .title {
+        text-align: center;
+    }
+}

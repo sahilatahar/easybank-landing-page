@@ -1,0 +1,146 @@
+/* Navbar CSS */
+.Navbar {
+    height: 70px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.nav__list {
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+.list__item {
+    height: 100%;
+    margin: 0 1rem;
+    color: var(--grayish-blue);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.list__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.list__item:hover {
+    color: var(--dark-blue);
+}
+
+.list__item:hover::before {
+    width: 100%;
+}
+
+.invitation__btn {
+    padding: 1rem 2rem;
+    border-radius: 100vmax;
+    -webkit-border-radius: 100vmax;
+    -moz-border-radius: 100vmax;
+    -ms-border-radius: 100vmax;
+    -o-border-radius: 100vmax;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.invitation__btn:focus {
+    outline: none;
+}
+
+.invitation__btn:hover {
+    opacity: 0.6;
+}
+
+.hamburger__icon {
+    display: none;
+}
+
+/* Dialog BG which act normal for medium & Large devices but for small devices it block screen and show only navbar*/
+.dialog__bg {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Navbar Responsive Code */
+@media screen and (max-width: 950px) {
+    .Navbar {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Navbar {
+        height: 60px;
+    }
+
+    .nav__list {
+        width: 80%;
+        margin-top: 50px;
+        height: max-content;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--white);
+        padding-bottom: 1rem;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+
+    .nav__list .list__item {
+        padding-top: 1rem;
+        margin: auto;
+    }
+
+    .list__item::before {
+        display: none;
+    }
+
+    .Navbar .invitation__btn {
+        display: none;
+    }
+
+    .hamburger__icon {
+        display: block;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .dialog__bg {
+        visibility: hidden;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(#2d314d, transparent);
+    }
+}
