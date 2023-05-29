@@ -13,9 +13,12 @@ export const Navbar = () => {
         // Add event listener for window resize
         window.addEventListener('resize', handleResize);
         window.addEventListener('load', handleResize);
+        window.addEventListener('scroll', closeNavbar);
         // Clean up the event listener on component unmount
         return () => {
+            window.addEventListener('resize', handleResize);
             window.removeEventListener('load', handleResize);
+            window.removeEventListener('scroll', closeNavbar);
         };
     }, []);
 
@@ -26,6 +29,10 @@ export const Navbar = () => {
             setShowNavbar(true);
         }
     };
+
+    const closeNavbar = () => {
+        setShowNavbar(false);
+    }
 
     return (
         // Navbar
