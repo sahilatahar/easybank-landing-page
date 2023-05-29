@@ -23,6 +23,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+![Screenshot 2023-05-29 at 20-47-49 Easybank landing page](https://github.com/sahilatahar/easybank-landing-page/assets/100127570/57d24340-3129-49f7-8d65-d600c1da923e)
 
 ### Links
 
